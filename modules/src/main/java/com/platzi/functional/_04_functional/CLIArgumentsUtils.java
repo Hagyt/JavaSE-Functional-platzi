@@ -6,6 +6,7 @@ import java.util.function.Supplier;
 
 public class CLIArgumentsUtils {
     static void showHelp(CLIArguments cliArguments) {
+        // A type of function that accept parameters, but it returns nothing
         Consumer<CLIArguments> consumerHelper = cliArguments1 -> {
             if (cliArguments1.isHelp()) {
                 System.out.println("Manual solicitado");
@@ -16,6 +17,7 @@ public class CLIArgumentsUtils {
     }
 
     static CLIArguments generateCLI() {
+        // A type of function that accept no parmeters but returns a value
         Supplier<CLIArguments> generator = () -> new CLIArguments();
 
         return generator.get();

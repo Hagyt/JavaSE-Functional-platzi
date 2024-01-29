@@ -15,11 +15,16 @@ public class MathFunctions {
         System.out.println(squareFunction.apply(5));
         System.out.println(squareFunction.apply(25));
 
+        // New sintax, more compact and legible
         Function<Integer, Boolean> isOdd = x -> x % 2 == 1;
 
+        // Predicate is a type of function that returns a boolean
+        // In this case an interface more specific for this function
+        // would be IntPredicate
         Predicate<Integer> isEven = x -> x % 2 == 0;
 
-        isEven.test(4); //true
+        // Instead of apply() method we use test()
+        isEven.test(4); // true
 
         Predicate<Student> isApproved = student -> student.getCalificacion() >= 6.0;
 

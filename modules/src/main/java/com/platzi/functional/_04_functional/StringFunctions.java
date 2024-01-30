@@ -37,6 +37,6 @@ public class StringFunctions {
                 (text, number) -> String.format("%" + number + "s", text);
 
         System.out.println(leftPad.apply("Java", 10));
-        
+
     }
 }
